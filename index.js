@@ -1,8 +1,12 @@
 const express = require('express')
 const app = express()
 
+//Setting up view engine ejs
+app.set('view engine', 'ejs')
+
+//Defining endpoints
 app.get('/', (req, res) => {
-    res.send("Testing Success!!")
+    res.render('testSample')
 })
 
 const port = 3000
